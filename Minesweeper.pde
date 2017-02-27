@@ -1,7 +1,7 @@
 public final static int ROWS = 20;
 public final static int COLLUMNS = 20;
 public final static int BUTTON_SIZE = 30;
-public final static int MAX_BOMBS = 100;
+public final static int MAX_BOMBS = 75;
 
 public Button[][] field = new Button[ROWS][COLLUMNS];
 public int gameState = 0;
