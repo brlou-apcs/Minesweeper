@@ -35,7 +35,7 @@ public void resetField() {
 
   int numBombs = 0;
   /* Randomly assign bombs */
-  while(numBombs <= MAX_BOMBS) {
+  while(numBombs < MAX_BOMBS) {
     int randY = (int)(Math.random()*ROWS);
     int randX = (int)(Math.random()*COLLUMNS);
 
@@ -131,7 +131,7 @@ public void draw() {
 public boolean fieldCleared() {
   for(int y = 0; y < field.length; y++) {
     for(int x = 0; x < field[y].length; x++) {
-      if(!field[y][x].isClicked()) return false;
+      if(field[y][x].getType().equals("safe") && !field[y][x].isClicked()) return false;
     }
   }
   return true;
