@@ -6,6 +6,7 @@ public final static int MAX_BOMBS = 75;
 public Button[][] field = new Button[ROWS][COLLUMNS];
 public int gameState = 0;
 public boolean gameOver = false;
+
 /*
 0 - game start
 1 - game play
@@ -289,7 +290,6 @@ public class Button {
   }
 
   public void rightClick() {
-    clicked = true;
     cellColor = color(255, 0, 0);
     display = "F";
   }
