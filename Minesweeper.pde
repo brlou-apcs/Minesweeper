@@ -290,8 +290,15 @@ public class Button {
   }
 
   public void rightClick() {
-    cellColor = color(255, 0, 0);
-    display = "F";
+    if(!clicked) {
+      if(display.equals("F")) {
+        cellColor = 200;
+        display = "";
+      } else {
+        cellColor = color(255, 0, 0);
+        display = "F";
+      }
+    }
   }
 
   public void setSurroundingBombs(int c) {
